@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/components/bitrix/sale.account.pay/templates/bootstrap_v4/script.js" => "16968612373584",]; ?>

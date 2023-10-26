@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/templates/.default/components/bitrix/sale.personal.section/local.sale.personal.section/style.css" => "1698291258955","/bitrix/components/bitrix/socserv.auth.form/templates/flat/style.css" => "16968612692638",]; ?>

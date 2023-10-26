@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/js/ui/notification/ui.notification.css" => "16968612861796",]; ?>

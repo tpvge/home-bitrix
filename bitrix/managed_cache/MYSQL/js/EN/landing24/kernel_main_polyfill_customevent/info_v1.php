@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/js/main/polyfill/customevent/main.polyfill.customevent.js" => "1696861056556",]; ?>
