@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001698139507';
-$dateexpire = '001734139507';
+$datecreate = '001698555094';
+$dateexpire = '001734555094';
 $ser_content = 'a:2:{s:7:"CONTENT";s:1111:"<div class="brandblock-list" id="bx_IblockBrand_xXGM1R">					<div class="brandblock-item" id="brand_3_BrandReference_2_xXGM1R"  >
 				<span class="brandblock-image-container"><img class="brandblock-image" src="/upload/uf/10f/3.png"></span>			</div>					<div class="brandblock-item" id="brand_3_BrandReference_5_xXGM1R"  >
 				<span class="brandblock-image-container"><img class="brandblock-image" src="/upload/uf/32d/a.png"></span><span class="brandblock-text">Бесплатная доставка по всей России</span>			</div>					<div class="brandblock-item" id="brand_3_BrandReference_6_xXGM1R"  >

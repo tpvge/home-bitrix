@@ -1,0 +1,5 @@
+
+; /* Start:"a:4:{s:4:"full";s:88:"/bitrix/components/bitrix/iblock.vote/templates/bootstrap_v4/script.min.js?1696861166654";s:6:"source";s:70:"/bitrix/components/bitrix/iblock.vote/templates/bootstrap_v4/script.js";s:3:"min";s:0:"";s:3:"map";s:0:"";}"*/
+(function(e){if(!!e.JCFlatVote){return}e.JCFlatVote={trace_vote:function(e,t){var a;a=e;while(a=a.previousSibling){if(t)BX.addClass(a,"bx-star-active");else BX.removeClass(a,"bx-star-active")}if(t)BX.addClass(e,"bx-star-active");else BX.removeClass(e,"bx-star-active");a=e;while(a=a.nextSibling){BX.removeClass(a,"bx-star-active")}},do_vote:function(e,t,a){var i=e.id.match(/^vote_(\d+)_(\d+)$/);var r=i[1];var o=i[2];a["vote"]="Y";a["vote_id"]=r;a["rating"]=o;BX.ajax.post("/bitrix/components/bitrix/iblock.vote/component.php",a,function(e){var a=BX(t);if(a){var i=BX.create("DIV");i.innerHTML=e;a.parentNode.replaceChild(i.firstChild,a)}})}}})(window);
+/* End */
+;; /* /bitrix/components/bitrix/iblock.vote/templates/bootstrap_v4/script.min.js?1696861166654*/

@@ -1,19 +1,37 @@
-<?php
-/*
- * Файл bitrix/components/demo/catalog.element/component.php
- */
-if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true) die();
+<?
+namespace Orm\Review;
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
-// массив результата работы компонента
-$arResult = array();
-if (CModule::IncludeModule('iblock')) {
-    // получаем из базы данных элемент инфоблока по идентификатору;
-    // идентификатор получаем из входных параметров компонента
-    $PRODUCT_ID = (int)$arParams['PRODUCT_ID'];
-    $result = CIBlockElement::GetByID($PRODUCT_ID);
-    if ($product = $result->GetNext()) {
-        $arResult['GENERAL'] = $product;
-    }
+
+$isVotingBannedFieldName = (string)$arParams["USER_BLOCK_FIELD"];
+$arResult['USER_AUTHORIZED'] = 'Y';
+
+if ($USER->GetID() == 0) {
+    $arResult['USER_AUTHORIZED'] = 'N';
+} else {
+    $arResult["VOTING_BANNED"] = 0;
+	
+	if (strlen(trim($isVotingBannedFieldName)) > 0) {
+        $arUser = $USER->GetById($USER->GetID())->Fetch();
+        $arResult["VOTING_BANNED"] = $arUser[$isVotingBannedFieldName] == false ? 0 : $arUser[$isVotingBannedFieldName];
+	}
+
+	$arReview = RatingEntityTable::getList(
+		[
+			'select' => ['*'],
+			'filter' => [
+				'=USER_ID' => $USER->GetID(),   
+				'=ELEMENT_ID' => $arParams['ELEMENT_ID']
+			]
+		]
+	)->fetch();
+
+
+	$arResult['USER_VOTED'] = $arReview != false ? 'Y' : 'N';
+	$arResult['STARS_COUNT'] = $arParams["STARS_COUNT"];
+	$arResult['COMMENT'] = $arReview['TEXT'];
+	$arResult['IBLOCK_ELEMENT_ID'] = $arParams['ELEMENT_ID'];
+    
 }
-// подключаем шаблон компонента
-$this->IncludeComponentTemplate();
+
+$this->includeComponentTemplate();

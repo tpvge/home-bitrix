@@ -1,5 +1,7 @@
 <?
 
+namespace Orm\Review;
+
 use Bitrix\Main\Entity;
 
 
@@ -30,7 +32,7 @@ class RatingEntityTable extends Entity\DataManager
             new Entity\TextField('TEXT', array(
                 'validation' => function () {
                     return array(
-                        new Entity\Validator\Length(1000),
+                        new Entity\Validator\Length(10),
                     );
                 },
             )),
@@ -57,10 +59,10 @@ class RatingEntityTable extends Entity\DataManager
                 ['=this.ELEMENT_ID' => 'ref.ID']
             ),
 
-            new Entity\DatetimeField('DATE_TIME', array(
+            new Entity\DateField('DATE_TIME', array(
                 'validation' => function () {
                     return array(
-                        new Entity\Validator\RegExp("/^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])$/"),
+                        new Entity\Validator\RegExp("/^[0-9]{4}.(0[1-9]|1[012]).(0[1-9]|1[0-9]|2[0-9]|3[01])$/"),
                     );
                 },
             )),
@@ -68,13 +70,14 @@ class RatingEntityTable extends Entity\DataManager
     }
 }
 
-
-RatingEntityTable::getEntity()->compileDbTableStructureDump();
-
+// echo "<pre>";
+// var_dump(RatingEntityTable::getEntity()->compileDbTableStructureDump());
+// echo "</pre>";
 // CREATE TABLE `rating_entity` (
     //`USER_ID` int NOT NULL, 
     // `TEXT` text NOT NULL, 
     // `VALUE` double NOT NULL, 
     // `ELEMENT_ID` int NOT NULL, 
     // `DATE_TIME` datetime NOT NULL, 
-    // PRIMARY KEY(`USER_ID`, `ELEMENT_ID`))
+    // PRIMARY KEY(`USER_ID`, `ELEMENT_ID`))\
+    

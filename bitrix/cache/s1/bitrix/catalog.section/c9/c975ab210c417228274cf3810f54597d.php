@@ -1,8 +1,8 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001698139268';
-$dateexpire = '001734139268';
-$ser_content = 'a:2:{s:7:"CONTENT";s:7952:"<div class="row bx-red"> 	<div class="col">
+$datecreate = '001698555088';
+$dateexpire = '001734555088';
+$ser_content = 'a:2:{s:7:"CONTENT";s:7963:"<div class="row bx-red"> 	<div class="col">
 			<div class="mb-4 catalog-section" data-entity="container-KEdkRN">
 			<!-- items-container -->
 						<!-- items-container -->
@@ -36,7 +36,7 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:7952:"<div class="row bx-red"> 	<div class=
 				navParams: {\'NavPageCount\':\'1\',\'NavPageNomer\':\'1\',\'NavNum\':\'KEdkRN\'},
 				deferredLoad: false,
 				initiallyShowHeader: \'\',
-				bigData: {\'enabled\':true,\'rows\':[{\'VARIANT\':\'3\',\'BIG_DATA\':true}],\'count\':\'4\',\'rowsRange\':[\'4\'],\'shownIds\':[],\'js\':{\'cookiePrefix\':\'BITRIX_SM\',\'cookieDomain\':\'\',\'serverTime\':\'1698139268\'},\'params\':{\'uid\':\'d98bb73781d6b36140117537ede1dd66\',\'aid\':\'e8de9069c44cfa500c54800d8b34b04d\',\'count\':\'30\',\'op\':\'recommend\',\'ib\':\'2\'}},
+				bigData: {\'enabled\':true,\'rows\':[{\'VARIANT\':\'3\',\'BIG_DATA\':true}],\'count\':\'4\',\'rowsRange\':[\'4\'],\'shownIds\':[],\'js\':{\'cookiePrefix\':\'BITRIX_SM\',\'cookieDomain\':\'home-bitrix\',\'serverTime\':\'1698555088\'},\'params\':{\'uid\':\'d98bb73781d6b36140117537ede1dd66\',\'aid\':\'e8de9069c44cfa500c54800d8b34b04d\',\'count\':\'30\',\'op\':\'recommend\',\'ib\':\'2\'}},
 				lazyLoad: !!\'\',
 				loadOnScroll: !!\'\',
 				template: \'bootstrap_v4.5d63fe125cc5a6c7230be8f2d29da3a1c7d65187bed4d98e8348b1d6e5153d37\',

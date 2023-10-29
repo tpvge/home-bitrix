@@ -67,7 +67,7 @@ function OnAfterUserUpdateHandler(&$arFields)
       '5' => 2, //ur
       '6' => 3, //ip
    );
-   if ($arr[$arUser["UF_PAYER_TYPE"]] != $_POST["PERSON_TYPE"]) {
+   if (!empty($_POST["PERSON_TYPE"]) && $arr[$arUser["UF_PAYER_TYPE"]] != $_POST["PERSON_TYPE"]) {
       $key = array_search($_POST["PERSON_TYPE"], $arr);
       $user = new CUser;
       $fields = array(

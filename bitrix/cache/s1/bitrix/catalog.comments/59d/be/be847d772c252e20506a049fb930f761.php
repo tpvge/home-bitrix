@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001698139507';
-$dateexpire = '001734139507';
+$datecreate = '001698555094';
+$dateexpire = '001734555094';
 $ser_content = 'a:2:{s:7:"CONTENT";s:925:"<div id="soc_comments_div_3" class="bx_soc_comments_div bx_important bx_red"><div id="soc_comments_3" class="bx-catalog-tab-section-container">
 	<ul class="bx-catalog-tab-list" style="left: 0;"><li id="soc_comments_3BLOG"><span>Комментарии</span></li></ul>
 	<div class="bx-catalog-tab-body-container">

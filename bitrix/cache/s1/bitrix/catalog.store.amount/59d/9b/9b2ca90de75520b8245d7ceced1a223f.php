@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001698242756';
-$dateexpire = '001698278756';
+$datecreate = '001698555095';
+$dateexpire = '001698591095';
 $ser_content = 'a:2:{s:7:"CONTENT";s:645:"<div class="bx_storege" id="catalog_store_amount_div">
 	</div>
 	<script type="text/javascript">

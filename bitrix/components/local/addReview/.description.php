@@ -1,18 +1,14 @@
 <?php
-/*
- * Файл bitrix/components/demo/catalog.element/.description.php
- */
-if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true) die();
-$arComponentDescription = array(
+if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
+
+$arComponentDescription = [
     'NAME' => 'Добавление отзыва о элементе',
-    'DESCRIPTION' => 'Добавление отзыва о элементе',
-    'PATH' => array(
-        'ID' => 'demo',
-        'NAME' => 'Мои компоненты',
-        'CHILD' => array(
-            'ID' => 'review',
-            'NAME' => 'Отзывы'
-        )
-    ),
-    'ICON' => '/images/icon.gif'
-);
+    'DESCRIPTION' => 'Позволяет пользователям оставлять отзывы об элементе инфоблока',
+    'CACHE_PATH' => 'Y',
+    'SORT' => 30,
+    'COMPLEX' => 'N',
+    'PATH' => [
+        'ID' => 'reviews_comnponents',
+        'NAME' => 'Компоненты отзывов',
+    ]
+];
