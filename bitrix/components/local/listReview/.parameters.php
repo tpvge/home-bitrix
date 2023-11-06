@@ -10,9 +10,16 @@ $arFilter = [
     "ACTIVE_DATE" => "Y",
     "ACTIVE" => "Y",
 ];
+
 $dbIBlockType = CIBlockElement::GetList([], $arFilter, false, false, $arSelect);
 while ($arIBlockType = $dbIBlockType->Fetch()) {
     $arIblockType[$arIBlockType["ID"]] = "ID: " . $arIBlockType["ID"] . " -> " . "NAME: " . $arIBlockType["NAME"];
+}
+
+$arTemplates = array();
+$rsTemplates = CComponentUtil::GetTemplatesList("bitrix:main.pagenavigation");
+foreach ($rsTemplates as $key => $value) {
+    $arTemplates[$key] = $value["NAME"];
 }
 
 $arComponentParameters  = [
@@ -37,7 +44,8 @@ $arComponentParameters  = [
         'NAVIGATION_TEMPLATE' => [
             'PARENT' => 'VISUAL',
             'NAME' => 'Название шаблона пагинатора',
-            'TYPE' => 'STRING',
+            'TYPE' => 'LIST',
+            'VALUES' => $arTemplates,
             'DEFAULT' => '.default'
         ],
         'CACHE_TIME' => [

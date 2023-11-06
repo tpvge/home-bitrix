@@ -44,10 +44,10 @@ if ($cache->initCache($cacheTime, $cacheKey, $cachePath)) {
     $arResult["REVIEWS_LIST"] = [];
 
     $pageNavigator = new PageNavigation('nav-reviews');
-    $pageNavigator->allowAllRecords(true)->setPageSize($pageElementsCount)->initFromUri();
+    $pageNavigator->setPageSize($pageElementsCount)->initFromUri();
 
     $obReviews = RatingEntityTable::getList([
-        "select" => ['*'],
+        "select" => ['*', 'USER.NAME', 'USER.LAST_NAME', 'USER.UF_VOTING'],
         'filter' => [
             'ELEMENT_ID' => $arParams['ELEMENT_ID'],
             '>=DATE_TIME' => $dateTime,
@@ -60,18 +60,16 @@ if ($cache->initCache($cacheTime, $cacheKey, $cachePath)) {
         'limit' => $pageNavigator->getLimit()
     ]);
 
+
     $pageNavigator->setRecordCount($obReviews->getCount());
 
     $arResult['NAV_OBJECT'] = $obReviews->getCount() > $arParams['PAGE_ELEMENTS_COUNT'] ? $pageNavigator : false;
 
     while ($arReview = $obReviews->fetch()) {
-        $rsUser = CUser::GetByID($arReview['USER_ID']);
-        $arUser = $rsUser->Fetch();
-
         $obDate = new DateTime($arReview['DATE_TIME']);
         $arReview['DATE_TIME'] = $obDate->toString();
-        $arReview['AUTHOR_FULLNAME'] = $arUser["NAME"] . " " . $arUser["LAST_NAME"];
-        $arReview['AUTHOR_BANNED'] = $arUser["UF_VOTING"];
+        $arReview['AUTHOR_FULLNAME'] = $arReview["ORM_REVIEW_RATING_ENTITY_USER_NAME"] . " " . $arReview["ORM_REVIEW_RATING_ENTITY_USER_LAST_NAME"];
+        $arReview['AUTHOR_BANNED'] = $arReview["ORM_REVIEW_RATING_ENTITY_USER_UF_VOTING"];
         $arResult["REVIEWS_LIST"][] = $arReview;
     }
 

@@ -68,9 +68,9 @@ function addReview($postData): void
 
     if (!$result->isSuccess()) {
         echo json_encode($result->getErrors(), JSON_UNESCAPED_UNICODE);
+    } else {
+        echo json_encode(["status" => "ok"]);
     }
-
-    echo json_encode(["status" => "ok"]);
 }
 // [{"message":"Значение поля \"TEXT\" недостаточно длинное. Минимальная длина: 1000.","code":"BX_INVALID_VALUE","customData":null},
 // {"message":"Неправильный формат \"DATE_TIME\"","code":"BX_INVALID_VALUE","customData":null}]{"status":"ok"}

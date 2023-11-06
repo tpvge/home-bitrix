@@ -38,3 +38,31 @@
 .rate-area > label:active {
 	position: relative;
 }
+
+
+
+
+
+
+
+.rating-block {
+	overflow: hidden;
+	width: 400px;
+	margin: 0 auto;
+}
+.rating-block:not(:checked) > input {
+	display: none;
+}
+.rating-block:not(:checked) > label {
+	float: right;
+	width: 42px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 32px;
+	line-height: 32px;
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.rating-block:not(:checked) > label:before {
+	content: '★';
+}

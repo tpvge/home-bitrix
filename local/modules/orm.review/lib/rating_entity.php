@@ -24,7 +24,7 @@ class RatingEntityTable extends Entity\DataManager
                 }
             )),
             new Entity\ReferenceField(
-                'USER_ID',
+                'USER',
                 '\Bitrix\Main\UserTable',
                 ['=this.USER_ID' => 'ref.ID']
             ),

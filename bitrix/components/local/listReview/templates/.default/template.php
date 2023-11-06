@@ -6,9 +6,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 <h3 class="mt-5">Список отзывов об элементе</h3>
 
 <?
-echo "<pre>";
-var_dump($arResult);
-echo "</pre>";
 if ($arResult['REVIEWS_LIST']) {
     foreach ($arResult['REVIEWS_LIST'] as $review) : ?>
         <div class="border p-3 mb-3" <?= $review['AUTHOR_BANNED'] == "1" ? 'style="opacity: 30%"' : '' ?>>

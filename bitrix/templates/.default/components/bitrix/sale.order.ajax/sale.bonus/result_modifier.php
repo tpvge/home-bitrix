@@ -15,11 +15,11 @@ $arParams['SERVICES_IMAGES_SCALING'] = (string)($arParams['SERVICES_IMAGES_SCALI
 $component = $this->__component;
 $component::scaleImages($arResult['JS_DATA'], $arParams['SERVICES_IMAGES_SCALING']);
 
-$rsUsers = CUser::GetByID($USER->GetID());
-$arUser = $rsUsers->Fetch();
-$arResult['JS_DATA']["USER"]["BONUS"] = $arUser["UF_BONUS"];
-$arResult['JS_DATA']["USER"]["SECOND_NAME"] = $arUser["SECOND_NAME"];
-$arResult['JS_DATA']["USER"]["PAYER_TYPE"] = $arUser["UF_PAYER_TYPE"];
+// $rsUsers = CUser::GetByID($USER->GetID());
+// $arUser = $rsUsers->Fetch();
+// $arResult['JS_DATA']["USER"]["BONUS"] = $arUser["UF_BONUS"];
+// $arResult['JS_DATA']["USER"]["SECOND_NAME"] = $arUser["SECOND_NAME"];
+// $arResult['JS_DATA']["USER"]["PAYER_TYPE"] = $arUser["UF_PAYER_TYPE"];
 
 
 

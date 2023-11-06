@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001698570048';
-$dateexpire = '001698656448';
+$datecreate = '001699267617';
+$dateexpire = '001699354017';
 $ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:2:{i:0;a:3:{s:3:"LID";s:2:"s1";s:4:"NAME";s:66:"Интернет-магазин (Сайт по умолчанию)";s:4:"SORT";s:1:"1";}i:1;a:3:{s:3:"LID";s:2:"s2";s:4:"NAME";s:33:"Английская версия";s:4:"SORT";s:1:"5";}}}';
 return true;
 ?>

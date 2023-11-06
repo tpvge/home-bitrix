@@ -5,8 +5,8 @@ $APPLICATION->SetTitle("Мои компоненты");
 	"local:addReview", 
 	".default", 
 	array(
-		"ELEMENT_ID" => "18",
-		"STARS_COUNT" => "3",
+		"ELEMENT_ID" => "3",
+		"STARS_COUNT" => "7",
 		"USER_BLOCK_FIELD" => "UF_VOTING",
 		"COMPONENT_TEMPLATE" => ".default"
 	),
